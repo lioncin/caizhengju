@@ -36,7 +36,11 @@
           account:account
         },
         success(data, status){
-          console.log(data);
+          if(data.indexOf('user')==-1){
+            alert(`输入正确的姓名和账号`);
+          }else{
+            location.href = data;
+          }
         }
       });
     }else{
