@@ -13,6 +13,14 @@ body {
     padding: 0;
   }
 
+  .color1{
+    color: #7263aa;
+  }
+
+  .color2{
+    color: #4173ba;
+  }
+
 .home .button{
   width: 20%;
   position: absolute;
@@ -27,7 +35,7 @@ body {
   left: 5%;
   width: 90%;
   background: #FFF;
-  color: #7263aa;
+
   font-family: 'SimHei';
   font-size: 3em;
   z-index: 1;

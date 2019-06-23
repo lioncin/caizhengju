@@ -12,7 +12,8 @@ router.get('/step1', function(req, res, next) {
 });
 
 router.get('/step2', function(req, res, next) {
-  res.render('step2', { title: 'Express' });
+  var user = {};
+  res.render('step2', { title: 'Express','zzDaka':'06:12', 'zwDaka':'23:12' });
 });
 
 router.get('/step3', function(req, res, next) {
