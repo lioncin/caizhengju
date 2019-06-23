@@ -36,4 +36,9 @@ router.get('/step4', function(req, res, next) {
   res.render('step4', { title: 'Express',wordRecords:'123',zini:'562' });
 });
 
+router.get('/step5', function(req, res, next) {
+  var user = {};
+  res.render('step5', { title: 'Express',day:'123'});
+});
+
 module.exports = router;

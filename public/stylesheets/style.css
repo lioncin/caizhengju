@@ -29,6 +29,10 @@ body {
     color: #ec5214;
   }
 
+  .color5{
+    color:#e57a72;
+  }
+
   .line1{
     height: 100px;
     line-height: 100px;
@@ -37,6 +41,11 @@ body {
   .line2{
     height: 75px;
     line-height: 75px;
+  }
+
+  .line3{
+    height: 120px;
+    line-height: 120px;
   }
 
 .home .button{
