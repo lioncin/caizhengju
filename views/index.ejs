@@ -9,15 +9,38 @@
     <div class="login">
       <div class="item user">
         <span class="t">金三账号：</span>
-        <input type="text" class="">
+        <input id="account" type="text" class="">
       </div>
       <div class="item password">
         <span class="t">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
-        <input type="text">
+        <input id="username" type="text">
       </div>
     </div>
-    <div class="button" onclick="location.href='/step1?user=1';">
+    <div class="button" onclick="login()">
       <img src="/images/button.png" alt="">
     </div>
   </body>
 </html>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+  function login(){
+    var account = document.getElementById('account').value;
+    var username = document.getElementById('username').value;
+    if(account && username){
+      var url = '/login';
+      $.ajax({
+        url: url,
+        type:'POST',
+        data:{
+          username:username,
+          account:account
+        },
+        success(data, status){
+          console.log(data);
+        }
+      });
+    }else{
+      alert(`请输入金三账号和用户名`);
+    }
+  }
+</script>

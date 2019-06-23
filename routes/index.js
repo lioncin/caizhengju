@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var data = require('./data');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -39,6 +40,12 @@ router.get('/step4', function(req, res, next) {
 router.get('/step5', function(req, res, next) {
   var user = {};
   res.render('step5', { title: 'Express',day:'123'});
+});
+
+router.post('/login', function(req, res, next){
+  const account = req.body.account;
+  const username = req.body.username;
+  res.send('success');
 });
 
 module.exports = router;
