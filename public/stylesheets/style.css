@@ -67,7 +67,8 @@ body {
 
   .login .item .t{
     color: #FFF;
-    font-size: 3em;
+    font-size: 2.5em;
+    width: 25%;
   }
 
   .login .item input{
@@ -85,7 +86,7 @@ body {
   position: absolute;
   z-index: 1;
   left: 40%;
-  top: 40%;
+  top: 47%;
 }
 
 .step1 .desc{
