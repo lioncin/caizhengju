@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: 14px "SimHei","Lucida Grande", Helvetica, Arial, sans-serif; }
+
+  .home{
+    position: relative;
+  }
+
+  img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.home .button{
+  width: 20%;
+  position: absolute;
+  z-index: 1;
+  left: 40%;
+  top: 40%;
+}
+
+.step1 .desc{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  background: #FFF;
+  color: #7263aa;
+  font-family: 'SimHei';
+  font-size: 3em;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.step1 .desc .line{
+  margin-left: 5%;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+
+.step1 .desc .line .w{
+  font-size: 1.5em;
+  padding: 0 2%;
+}
+
+.step1 .desc .line .hour{
+  padding: 0 5%;
+}
+
+.step1 .desc .line .day{
+  padding-left: 2%;
+}
+
+.step1 .array{
+  width: 95px;
+  height: 105px;
+  position: absolute;
+  right: 12%;
+  top: 32%;
+}
