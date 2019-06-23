@@ -17,7 +17,18 @@ router.get('/step2', function(req, res, next) {
 });
 
 router.get('/step3', function(req, res, next) {
-  res.render('step3', { title: 'Express' });
+  var user = {};
+  res.render('step3',
+    {
+      title: 'Express',
+      outDay: '4',
+      outAddr: '苏州，上海，北京',
+      abroadDay: '5',
+      abroadAddr: '新加坡，印尼，额罗搜',
+      jtDay: '7',
+      jdAddr: '英国，法国，中国',
+    }
+  );
 });
 
 router.get('/step4', function(req, res, next) {

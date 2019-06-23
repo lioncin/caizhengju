@@ -21,6 +21,20 @@ body {
     color: #4173ba;
   }
 
+  .color3{
+    color:#138c3c
+  }
+
+  .line1{
+    height: 100px;
+    line-height: 100px;
+  }
+
+  .line2{
+    height: 75px;
+    line-height: 75px;
+  }
+
 .home .button{
   width: 20%;
   position: absolute;
@@ -31,11 +45,12 @@ body {
 
 .step1 .desc{
   position: absolute;
-  top: 10%;
+  top: 150px;
   left: 5%;
   width: 90%;
   background: #FFF;
-
+  min-height: 500px;
+  max-height: 700px;
   font-family: 'SimHei';
   font-size: 3em;
   z-index: 1;
@@ -45,8 +60,7 @@ body {
 .step1 .desc .line{
   margin-left: 5%;
   width: 100%;
-  height: 100px;
-  line-height: 100px;
+
 }
 
 .step1 .desc .line .w{
@@ -67,5 +81,5 @@ body {
   height: 105px;
   position: absolute;
   right: 12%;
-  top: 32%;
+  top: 645px;
 }
