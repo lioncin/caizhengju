@@ -2,22 +2,24 @@
 <html>
   <head>
     <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body class="home">
     <img src="/images/00.jpg" alt="">
     <div class="login">
-      <div class="item user">
-        <span class="t">金三账号：</span>
-        <input id="account" type="text" class="">
+      <div class="item">
+        <div class="t left name">姓名：</div>
+        <input id="username" class="left" type="text">
       </div>
-      <div class="item password">
-        <span class="t">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
-        <input id="username" type="text">
+      <div class="item">
+        <div class="t left">个人密钥：</div>
+        <input id="account" class="left" type="text">
       </div>
+
     </div>
     <div class="button" onclick="login()">
-      <img src="/images/button.png" alt="">
+      查看我的年度账单&gt;&gt;
     </div>
   </body>
 </html>
