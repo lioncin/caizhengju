@@ -11,6 +11,15 @@ body {
     float: left;
   }
 
+  audio{
+    width: 1px;
+    height: 1px;
+  }
+
+  .hidden{
+    display: none;
+  }
+
   .clear{
     clear: both;
   }
@@ -19,6 +28,11 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+
+  .number{
+    color:#595757;
   }
 
   .color1{

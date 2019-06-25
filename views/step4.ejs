@@ -9,15 +9,20 @@
     <div class="desc">
         <div class="line">如果没有特别幸运，那么请先特别努力</div>
         <div class="line">这一年</div>
-        <div class="line">你发布了 <span class="hour"><%=wordRecords%></span>条工作纪实</div>
-        <div class="line">自拟了<span class="hour"><%=zini%></span>条工作任务</div>
+        <div class="line">你发布了 <span class="day number hidden"><%=wordRecords%></span>条工作纪实</div>
+        <div class="line">自拟了<span class="day number hidden"><%=zini%></span>条工作任务</div>
         <div class="line">无奋斗，不<span class="w">青春</span></div>
     </div>
     <div class="array">
       <img src="/images/arr.png" alt="">
     </div>
+    <audio src="/images/b.mp3" controls="controls" autoplay="autoplay"></audio>
   </body>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script>
+      $(document).ready(function(){
+        $('.number').fadeIn(3000);
+    });
       var startx, starty;
       //获得角度
       function getAngle(angx, angy) {

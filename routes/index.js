@@ -11,27 +11,47 @@ router.get('/', function(req, res, next) {
 router.get('/step1', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  res.render('step1', { title: 'Express','jbHours':user['jbHours'],'jbDays':user['workDay'] });
+  const jbDays = user['workDay'].split('.')[0];
+  const jbHours = user['jbHours'].split('.')[0];
+  res.render('step1', { title: 'Express','jbHours':user['jbHours'],'jbDays':jbDays });
 });
 
 router.get('/step2', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  res.render('step2', { title: 'Express','zzDaka':user['zzDaka'], 'zwDaka':user['zwDaka'] });
+  const zzDaka = user['zzDaka'].split('.')[0];
+  const zwDaka = user['zwDaka'].split('.')[0];
+  res.render('step2', { title: 'Express','zzDaka':zzDaka, 'zwDaka':zwDaka });
 });
 
 router.get('/step3', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
+  const workOutDays = user['workOutDays'].split('.')[0];
+  const abroadDays = user['abroadDays'].split('.')[0];
+  const workOutDays2 = user['workOutDays2'].split('.')[0];
+
+  var workOutAddr2 = '';
+  if(user['workOutAddr2']!=''){
+    workOutAddr2 ='，到过'+user['workOutAddr2'];
+  }
+  var abroadAddr = '';
+  if(user['abroadAddr']!=''){
+    abroadAddr = user['abroadAddr'];
+  }
+  var workOutAddr = '';
+  if(user['workOutAddr']!=''){
+    workOutAddr = user['workOutAddr'];
+  }
   res.render('step3',
     {
       title: 'Express',
-      outDay: user['workOutDays'],
-      outAddr: user['workOutAddr'],
-      abroadDay: user['abroadDays'],
-      abroadAddr: user['abroadAddr'],
-      jtDay: user['workOutDays2'],
-      jdAddr: user['workOutAddr2'],
+      outDay: workOutDays,
+      outAddr: workOutAddr,
+      abroadDay: abroadDays,
+      abroadAddr: abroadAddr,
+      jtDay: workOutDays2,
+      jdAddr: workOutAddr2,
     }
   );
 });
@@ -39,19 +59,20 @@ router.get('/step3', function(req, res, next) {
 router.get('/step4', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  res.render('step4', { title: 'Express',wordRecords:user['workRecords'],zini:user['tasks'] });
+  const workRecords = user['workRecords'].split('.')[0];
+  const tasks = user['tasks'].split('.')[0];
+  res.render('step4', { title: 'Express',wordRecords:workRecords,zini:tasks });
 });
 
 router.get('/step5', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  res.render('step5', { title: 'Express',day:user['vacation']});
+  const vacation = user['vacation'].split('.')[0];
+  res.render('step5', { title: 'Express',day:vacation});
 });
 
 router.post('/login', function(req, res, next){
-  const target = req.body.account + '-' +req.body.username;
-  console.log(target);
-  console.log(USERLIST);
+  const target = req.body.username + '-' +req.body.account;
   const size = USERLIST.length;
   var index = -1;
   for(var i=0; i<size; i++){
