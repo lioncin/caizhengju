@@ -33,15 +33,15 @@ router.get('/step3', function(req, res, next) {
 
   var workOutAddr2 = '';
   if(user['workOutAddr2']!=''){
-    workOutAddr2 ='，到过'+user['workOutAddr2'];
+    workOutAddr2 = '，到过<span class="day number hidden">'+user['workOutAddr2']+'</span>';
   }
   var abroadAddr = '';
   if(user['abroadAddr']!=''){
-    abroadAddr = user['abroadAddr'];
+    abroadAddr = '，到过<span class="day number hidden">'+user['abroadAddr']+'</span>';
   }
   var workOutAddr = '';
   if(user['workOutAddr']!=''){
-    workOutAddr = user['workOutAddr'];
+    workOutAddr = '，到过<span class="day number hidden">'+user['workOutAddr']+'</span>';
   }
   res.render('step3',
     {
