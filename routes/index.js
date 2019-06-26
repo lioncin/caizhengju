@@ -5,7 +5,7 @@ var USERLIST = require('./USERLIST');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: '园区税务年度账单' });
 });
 
 router.get('/step1', function(req, res, next) {
@@ -13,7 +13,7 @@ router.get('/step1', function(req, res, next) {
   const user = USERDATA[uIndex];
   const jbDays = user['workDay'].split('.')[0];
   const jbHours = user['jbHours'].split('.')[0];
-  res.render('step1', { title: 'Express','jbHours':user['jbHours'],'jbDays':jbDays });
+  res.render('step1', { title: '园区税务年度账单','jbHours':user['jbHours'],'jbDays':jbDays });
 });
 
 router.get('/step2', function(req, res, next) {
@@ -21,7 +21,7 @@ router.get('/step2', function(req, res, next) {
   const user = USERDATA[uIndex];
   const zzDaka = user['zzDaka'].split('.')[0];
   const zwDaka = user['zwDaka'].split('.')[0];
-  res.render('step2', { title: 'Express','zzDaka':zzDaka, 'zwDaka':zwDaka });
+  res.render('step2', { title: '园区税务年度账单','zzDaka':zzDaka, 'zwDaka':zwDaka });
 });
 
 router.get('/step3', function(req, res, next) {
@@ -45,7 +45,7 @@ router.get('/step3', function(req, res, next) {
   }
   res.render('step3',
     {
-      title: 'Express',
+      title: '园区税务年度账单',
       outDay: workOutDays,
       outAddr: workOutAddr,
       abroadDay: abroadDays,
@@ -61,14 +61,14 @@ router.get('/step4', function(req, res, next) {
   const user = USERDATA[uIndex];
   const workRecords = user['workRecords'].split('.')[0];
   const tasks = user['tasks'].split('.')[0];
-  res.render('step4', { title: 'Express',wordRecords:workRecords,zini:tasks });
+  res.render('step4', { title: '园区税务年度账单',wordRecords:workRecords,zini:tasks });
 });
 
 router.get('/step5', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
   const vacation = user['vacation'].split('.')[0];
-  res.render('step5', { title: 'Express',day:vacation});
+  res.render('step5', { title: '园区税务年度账单',day:vacation});
 });
 
 router.post('/login', function(req, res, next){

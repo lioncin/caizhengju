@@ -88,7 +88,6 @@ body {
 
   .login .item .t{
     color: #FFF;
-    font-size: 1em;
     width: 35%;
     text-align: justify;
     padding-top: 7px;
@@ -109,7 +108,6 @@ body {
       width: 55%;
       background: none;
       color: #fff;
-      font-size: 1em;
     }
 
 .home .button{
@@ -131,20 +129,18 @@ body {
   min-height: 500px;
   max-height: 700px;
   font-family: 'SimHei';
-  font-size: 3em;
   z-index: 1;
   font-weight: bold;
 }
 
 .step1 .desc .line{
-  margin-left: 5%;
-  width: 100%;
-
+  padding: 0 3%;
+  font-size: 33pt;
 }
 
 .step1 .desc .line .w{
-  font-size: 1.5em;
   padding: 0 2%;
+  font-size: 43pt;
 }
 
 .step1 .desc .line .hour{
