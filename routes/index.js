@@ -8,6 +8,22 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: '园区税务年度账单' });
 });
 
+router.get('/p1', function(req, res, next) {
+  res.render('p1', { title: '园区税务年度账单'});
+});
+
+router.get('/p2', function(req, res, next) {
+  res.render('p2', { title: '园区税务年度账单'});
+});
+
+router.get('/p3', function(req, res, next) {
+  res.render('p3', { title: '园区税务年度账单'});
+});
+
+router.get('/p4', function(req, res, next) {
+  res.render('p4', { title: '园区税务年度账单'});
+});
+
 router.get('/step1', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
