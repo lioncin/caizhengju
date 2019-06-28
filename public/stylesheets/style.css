@@ -105,9 +105,48 @@ body {
   color: #3c419d;
 }
 
+.top1{
+  top: 1%;
+}
+
+.top2{
+  top: 2%;
+}
+
+.top3{
+  top:3%;
+}
+
+.top4{
+  top:4%;
+}
+
+.top5{
+  top:5%;
+}
+
+.top6{
+  top:6%;
+}
+
+.top7{
+  top:7%;
+}
+
+.top8{
+  top:8%;
+}
+
+.top9{
+  top:9%;
+}
+
+.top10{
+  top:10%;
+}
+
 .step1 .desc{
   position: absolute;
-  top: 10%;
   left: 5%;
   width: 90%;
   background: #FFF;
@@ -118,15 +157,16 @@ body {
 
 .desc .line{
   padding: 0 3%;
-  font-size: 1.4em;
-}
-
-.desc .day{
   font-size: 1.2em;
 }
 
+.desc .day{
+  font-size: 1.3em;
+}
+
 .step1 .desc .line .w{
-  padding: 0 2%;
+  padding: 0 1%;
+  font-size: 1.2em;
 }
 
 .step1 .desc .line .day{
