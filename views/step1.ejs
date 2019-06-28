@@ -12,11 +12,10 @@
       <div class="line line-t">你的工作日天数是<span class="day number hidden"><%=jbDays%></span>天</div>
       <div class="line line-t">加班了<span class="day number hidden"><%=jbHours%></span>小时</div>
       <div class="line line-t">为<span class="w">梦想</span>砥砺前行</div>
+      <div class="array">
+        <img src="/images/arr.png" alt="">
+      </div>
     </div>
-    <div class="array">
-      <img src="/images/arr.png" alt="">
-    </div>
-    <audio src="/images/b.mp3" controls="controls" autoplay="autoplay"></audio>
   </body>
   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script>
@@ -61,6 +60,7 @@
       }, false);
       //手指离开屏幕
       document.addEventListener("touchend", function(e) {
+        var user = location.search.split('user=')[1];
           var endx, endy;
           endx = e.changedTouches[0].pageX;
           endy = e.changedTouches[0].pageY;
@@ -70,12 +70,12 @@
                   console.log("未滑动！");
                   break;
               case 1:
-                  var user = location.search.split('user=')[1]
                   var url = '/step2?user='+user;
                   location.href = url;
                   break;
               case 2:
-                  console.log("向下！")
+                var url = '/p4?user='+user;
+                  location.href = url;
                   break;
               case 3:
                   console.log("向左！")

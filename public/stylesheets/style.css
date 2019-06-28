@@ -118,7 +118,11 @@ body {
 
 .desc .line{
   padding: 0 3%;
-  font-size: 1.5em;
+  font-size: 1.4em;
+}
+
+.desc .day{
+  font-size: 1.2em;
 }
 
 .step1 .desc .line .w{
@@ -142,9 +146,9 @@ body {
 }
 
 .step1 .array{
-  width: 95px;
-  height: 105px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   right: 12%;
-  top: 645px;
+  bottom: -50px;
 }
