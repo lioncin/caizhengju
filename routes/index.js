@@ -99,7 +99,7 @@ router.post('/login', function(req, res, next){
   if(index==-1){
     res.send('/');
   }else{
-    res.send('/step1?user='+index);
+    res.send('/p1?user='+index);
   }
 
 });
