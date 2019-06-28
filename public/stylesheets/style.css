@@ -55,22 +55,6 @@ body {
   .color5{
     color:#e57a72;
   }
-
-  .line1{
-    height: 100px;
-    line-height: 100px;
-  }
-
-  .line2{
-    height: 75px;
-    line-height: 75px;
-  }
-
-  .line3{
-    height: 120px;
-    line-height: 120px;
-  }
-
   .login{
     width: 60%;
     left: 20%;
@@ -123,29 +107,38 @@ body {
 
 .step1 .desc{
   position: absolute;
-  top: 150px;
+  top: 10%;
   left: 5%;
   width: 90%;
   background: #FFF;
-  min-height: 500px;
-  max-height: 700px;
   font-family: 'SimHei';
   z-index: 1;
   font-weight: bold;
 }
 
-.step1 .desc .line{
+.desc .line{
   padding: 0 3%;
-  font-size: 30pt;
+  font-size: 1.5em;
 }
 
 .step1 .desc .line .w{
   padding: 0 2%;
-  font-size: 40pt;
 }
 
 .step1 .desc .line .day{
   padding: 0 2%;
+}
+
+.line-t{
+  line-height: 50px;
+}
+
+.line-t2{
+  line-height: 40px;
+}
+
+.line-t3{
+  line-height: 30px;
 }
 
 .step1 .array{
