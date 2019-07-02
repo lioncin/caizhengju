@@ -211,7 +211,15 @@ ul,li{
 }
 
 #imagelist{
+
+}
+
+.imagelist{
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.imagelist2{
+  top: 12%;
 }
