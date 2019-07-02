@@ -31,7 +31,10 @@ body {
     padding: 0;
   }
 
-
+ul,li{
+  margin: 0;
+  padding: 0;
+}
   .number{
     color:#595757;
   }
@@ -191,4 +194,24 @@ body {
   position: absolute;
   right: 12%;
   bottom: -50px;
+}
+
+.view{
+  position: absolute;
+  width: 73%;
+  top: 30%;
+  height: 30%;
+  overflow: hidden;
+  left: 13%;
+}
+
+.imagelist li{
+  float: left;
+  margin: 0 5px;
+}
+
+#imagelist{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
