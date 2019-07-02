@@ -9,16 +9,43 @@
     <img src="/images/p6.jpg" alt="">
     <div class="view" id="view">
         <ul id='imagelist' class="imagelist">
-            <li class="image5"><img src="/images/4-1.jpg" alt=""></li>
-            <li class="image5"><img src="/images/4-2.jpg" alt=""></li>
-            <li class="image5"><img src="/images/4-3.jpg" alt=""></li>
-            <li class="image5"><img src="/images/4-4.jpg" alt=""></li>
-            <li class="image5"><img src="/images/4-5.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-1.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-2.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-3.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-4.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-5.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-6.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-7.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-8.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-9.jpg" alt=""></li>
+            <li class="image5"><img src="/images/6-10.jpg" alt=""></li>
         </ul>
     </div>
 
   </body>
   <script>
+      function showImage(index){
+          var left = 0;
+        var nodes = document.getElementsByClassName('image5');
+        for(var i=0; i<index; i++){
+            var node = nodes[i];
+            left += parseFloat(node.style.width.split('px')[0]) + 10;//margin 不算在width里面
+        }
+        document.getElementById('imagelist').style.left = -1 * left + 'px';
+      }
+
+      var width = window.screen.width;
+      var viewW = width * 0.7;
+
+      var images = document.getElementsByClassName('image5');
+      for(var i=0; i<10; i++){
+        var image = images[i];
+        image.style.width = viewW + 'px';
+      }
+
+      var imagelist = document.getElementById('imagelist');
+      imagelist.style.width = (viewW * 10 + 100) + 'px';
+
       var startx, starty;
       //获得角度
       function getAngle(angx, angy) {
@@ -55,6 +82,7 @@
           starty = e.touches[0].pageY;
       }, false);
       //手指离开屏幕
+      var imageIndex = 0;
       document.addEventListener("touchend", function(e) {
         var user = location.search.split('user=')[1];
           var endx, endy;
@@ -73,14 +101,19 @@
                   var url = '/p5?user='+user;
                   location.href = url;
                   break;
-              case 3:
-                  console.log("向左！")
+                case 3:
+                  if(imageIndex>-1 && imageIndex<9){
+                    imageIndex++;
+                  }
                   break;
               case 4:
-                  console.log("向右！")
+                  if(imageIndex>0 && imageIndex<10){
+                    imageIndex--;
+                  }
                   break;
               default:
           }
+          showImage(imageIndex);
       }, false);
 
   </script>
