@@ -11,9 +11,11 @@
         <ul id='imagelist' class="imagelist">
             <li class="image5"><img src="/images/8-1.jpg" alt=""></li>
             <li class="image5"><img src="/images/8-2.jpg" alt=""></li>
-            <li class="image5"><img src="/images/8-3.jpg" alt=""></li>
-            <li class="image5"><img src="/images/8-4.png" alt=""></li>
+            <li class="image5"><img src="/images/8-3.png" alt=""></li>
+            <li class="image5"><img src="/images/8-4.jpg" alt=""></li>
             <li class="image5"><img src="/images/8-5.png" alt=""></li>
+            <li class="image5"><img src="/images/8-6.jpg" alt=""></li>
+            <li class="image5"><img src="/images/8-7.jpg" alt=""></li>
         </ul>
     </div>
 
@@ -33,13 +35,13 @@
       var viewW = width * 0.7;
 
       var images = document.getElementsByClassName('image5');
-      for(var i=0; i<5; i++){
+      for(var i=0; i<7; i++){
         var image = images[i];
         image.style.width = viewW + 'px';
       }
 
       var imagelist = document.getElementById('imagelist');
-      imagelist.style.width = (viewW * 5 + 50) + 'px';
+      imagelist.style.width = (viewW * 7 + 70) + 'px';
 
       var startx, starty;
       //获得角度
@@ -97,12 +99,12 @@
                   location.href = url;
                   break;
                   case 3:
-                  if(imageIndex>-1 && imageIndex<4){
+                  if(imageIndex>-1 && imageIndex<6){
                     imageIndex++;
                   }
                   break;
               case 4:
-                  if(imageIndex>0 && imageIndex<5){
+                  if(imageIndex>0 && imageIndex<7){
                     imageIndex--;
                   }
                   break;
