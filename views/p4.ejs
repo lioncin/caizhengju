@@ -14,6 +14,11 @@
             <li class="image5"><img src="/images/4-3.jpg" alt=""></li>
             <li class="image5"><img src="/images/4-4.jpg" alt=""></li>
             <li class="image5"><img src="/images/4-5.jpg" alt=""></li>
+            <li class="image5"><img src="/images/4-6.jpg" alt=""></li>
+            <li class="image5"><img src="/images/4-7.jpg" alt=""></li>
+            <li class="image5"><img src="/images/4-8.jpg" alt=""></li>
+            <li class="image5"><img src="/images/4-9.jpg" alt=""></li>
+            <li class="image5"><img src="/images/4-10.jpg" alt=""></li>
         </ul>
     </div>
 
@@ -33,13 +38,13 @@
       var viewW = width * 0.7;
 
       var images = document.getElementsByClassName('image5');
-      for(var i=0; i<5; i++){
+      for(var i=0; i<10; i++){
         var image = images[i];
         image.style.width = viewW + 'px';
       }
 
       var imagelist = document.getElementById('imagelist');
-      imagelist.style.width = (viewW * 5 + 50) + 'px';
+      imagelist.style.width = (viewW * 10 + 100) + 'px';
 
       var startx, starty;
       //获得角度
@@ -98,12 +103,12 @@
                   location.href = url;
                   break;
               case 3:
-                  if(imageIndex>-1 && imageIndex<4){
+                  if(imageIndex>-1 && imageIndex<9){
                     imageIndex++;
                   }
                   break;
               case 4:
-                  if(imageIndex>0 && imageIndex<5){
+                  if(imageIndex>0 && imageIndex<10){
                     imageIndex--;
                   }
                   break;
