@@ -24,6 +24,26 @@ router.get('/p4', function(req, res, next) {
   res.render('p4', { title: '园区税务年度账单'});
 });
 
+router.get('/p5', function(req, res, next) {
+  res.render('p5', { title: '园区税务年度账单'});
+});
+
+router.get('/p6', function(req, res, next) {
+  res.render('p6', { title: '园区税务年度账单'});
+});
+
+router.get('/p7', function(req, res, next) {
+  res.render('p7', { title: '园区税务年度账单'});
+});
+
+router.get('/p8', function(req, res, next) {
+  res.render('p8', { title: '园区税务年度账单'});
+});
+
+router.get('/p9', function(req, res, next) {
+  res.render('p9', { title: '园区税务年度账单'});
+});
+
 router.get('/step1', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
