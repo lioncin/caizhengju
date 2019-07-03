@@ -103,6 +103,15 @@
       var imageIndex = 0;
       document.addEventListener("touchend", function(e) {
         var user = location.search.split('user=')[1];
+        var next = '';
+        var prev = '/p8?user='+user;
+        switch(user){
+          case `1`:
+            next = '/mawei1?user='+user;
+            break;
+          default:
+            next = '/step1?user='+user;;
+        }
           var endx, endy;
           endx = e.changedTouches[0].pageX;
           endy = e.changedTouches[0].pageY;
@@ -112,12 +121,10 @@
                   console.log("未滑动！");
                   break;
               case 1:
-              var url = '/step1?user='+user;
-                  location.href = url;
+                  location.href = next;
                   break;
               case 2:
-                  var url = '/p8?user='+user;
-                  location.href = url;
+                  location.href = prev;
                   break;
                 case 3:
                   if(imageIndex>-1 && imageIndex<27){

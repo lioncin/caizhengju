@@ -8,6 +8,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: '园区税务年度账单' });
 });
 
+router.get('/cover', function(req, res, next) {
+  res.render('cover', { title: '园区税务年度账单'});
+});
+
+router.get('/end', function(req, res, next) {
+  res.render('end', { title: '园区税务年度账单'});
+});
+
 router.get('/p1', function(req, res, next) {
   res.render('p1', { title: '园区税务年度账单'});
 });
@@ -44,6 +52,22 @@ router.get('/p9', function(req, res, next) {
   res.render('p9', { title: '园区税务年度账单'});
 });
 
+router.get('/mawei1', function(req, res, next) {
+  res.render('mawei1', { title: '园区税务年度账单'});
+});
+
+router.get('/mawei2', function(req, res, next) {
+  res.render('mawei2', { title: '园区税务年度账单'});
+});
+
+router.get('/mawei3', function(req, res, next) {
+  res.render('mawei3', { title: '园区税务年度账单'});
+});
+
+router.get('/mawei4', function(req, res, next) {
+  res.render('mawei4', { title: '园区税务年度账单'});
+});
+
 router.get('/step1', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
@@ -64,30 +88,15 @@ router.get('/step3', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
   const workOutDays = user['workOutDays'].split('.')[0];
-  const abroadDays = user['abroadDays'].split('.')[0];
-  const workOutDays2 = user['workOutDays2'].split('.')[0];
-
-  var workOutAddr2 = '';
-  if(user['workOutAddr2']!=''){
-    workOutAddr2 = '，到过<span class="day number hidden">'+user['workOutAddr2']+'</span>';
-  }
-  var abroadAddr = '';
-  if(user['abroadAddr']!=''){
-    abroadAddr = '，到过<span class="day number hidden">'+user['abroadAddr']+'</span>';
-  }
-  var workOutAddr = '';
-  if(user['workOutAddr']!=''){
-    workOutAddr = '，到过<span class="day number hidden">'+user['workOutAddr']+'</span>';
+  var abroadDays = user['abroadDays'].split('.')[0];
+  if(abroadDays==''){
+    abroadDays = 0;
   }
   res.render('step3',
     {
       title: '园区税务年度账单',
       outDay: workOutDays,
-      outAddr: workOutAddr,
       abroadDay: abroadDays,
-      abroadAddr: abroadAddr,
-      jtDay: workOutDays2,
-      jdAddr: workOutAddr2,
     }
   );
 });
@@ -119,7 +128,7 @@ router.post('/login', function(req, res, next){
   if(index==-1){
     res.send('/');
   }else{
-    res.send('/p1?user='+index);
+    res.send('/cover?user='+index);
   }
 
 });

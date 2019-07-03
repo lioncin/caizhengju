@@ -6,25 +6,9 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body class="home step1 color5 line1">
-    <img src="/images/05.jpg" alt="">
-    <div class="desc top3">
-        <div class="line line-t2">这一年</div>
-        <div class="line line-t2">你请休假天数<span class="day number hidden"><%=day%></span></div>
-        <div class="line line-t2">觉得累了就停下</div>
-        <div class="line line-t2">放慢脚步，放空自己</div>
-        <div class="line line-t2">休息好<span class="w">再出发</span></div>
-        <div class="array">
-            <img src="/images/arr.png" alt="">
-          </div>
-    </div>
-
+    <img src="/images/cover.jpg" alt="">
   </body>
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script>
-      $(document).ready(function(){
-        $('.number').fadeIn(3000);
-    });
-
       var startx, starty;
       //获得角度
       function getAngle(angx, angy) {
@@ -63,7 +47,7 @@
       //手指离开屏幕
       document.addEventListener("touchend", function(e) {
         var user = location.search.split('user=')[1];
-          const next = '/end?user='+user;
+        const next = '/p1?user='+user;
           var endx, endy;
           endx = e.changedTouches[0].pageX;
           endy = e.changedTouches[0].pageY;
@@ -76,7 +60,6 @@
                   location.href = next;
                   break;
               case 2:
-                history.go(-1);
                   break;
               case 3:
                   console.log("向左！")

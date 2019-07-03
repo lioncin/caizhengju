@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body class="home step1 color3 line2">
+  <body class="home step1 color3 line1">
     <img src="/images/03.jpg" alt="">
-    <div class="desc top1">
-        <div class="line line-t3">这一年</div>
-        <div class="line line-t3">你外出公干<span class='day number hidden'><%=outDay%></span>天<%-outAddr%></div>
-        <div class="line line-t3">出国<span class="day number hidden"><%=abroadDay%></span>天<%-abroadAddr%></div>
-        <div class="line line-t3">集体外出公干<span class="day number hidden"><%=jtDay%></span>天<%-jdAddr%></div>
-        <div class="line line-t3">沿途风景变换</div>
-        <div class="line line-t3">坚守<span class="w">初心</span>不改</div>
+    <div class="desc top5">
+        <div class="line line-t2">这一年</div>
+        <div class="line line-t2">你外出公干<span class='day number hidden'><%=outDay%></span>天</div>
+        <div class="line line-t2">出国请假<span class="day number hidden"><%=abroadDay%></span>天</div>
+        <div class="line line-t2">沿途风景变换</div>
+        <div class="line line-t2">坚守<span class="w">初心</span>不改</div>
         <div class="array">
             <img src="/images/arr.png" alt="">
           </div>
@@ -62,6 +61,9 @@
       }, false);
       //手指离开屏幕
       document.addEventListener("touchend", function(e) {
+        var user = location.search.split('user=')[1];
+        var prev = '/step2?user='+user;;
+        var next = '/step4?user='+user;;
           var endx, endy;
           endx = e.changedTouches[0].pageX;
           endy = e.changedTouches[0].pageY;
@@ -71,14 +73,10 @@
                   console.log("未滑动！");
                   break;
               case 1:
-                  var user = location.search.split('user=')[1]
-                  var url = '/step4?user='+user;
-                  location.href = url;
+                  location.href = next;
                   break;
               case 2:
-                var user = location.search.split('user=')[1]
-                  var url = '/step2?user='+user;
-                  location.href = url;
+                  location.href = prev;
                   break;
               case 3:
                   console.log("向左！")
