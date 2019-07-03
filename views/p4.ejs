@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body class="home step1 color5 line1">
+  <body class="home">
     <img src="/images/p4.jpg" alt="">
     <div class="view" id="view">
         <ul id='imagelist' class="imagelist">
@@ -35,7 +35,7 @@
       }
 
       var width = window.screen.width;
-      var viewW = width * 0.7;
+      var viewW = width * 0.725;
 
       var images = document.getElementsByClassName('image5');
       for(var i=0; i<10; i++){
@@ -51,7 +51,6 @@
       function getAngle(angx, angy) {
           return Math.atan2(angy, angx) * 180 / Math.PI;
       };
-
 
       //根据起点终点返回方向 1向上 2向下 3向左 4向右 0未滑动
       function getDirection(startx, starty, endx, endy) {
@@ -103,9 +102,10 @@
                   location.href = url;
                   break;
               case 3:
-                  if(imageIndex>-1 && imageIndex<9){
                     imageIndex++;
-                  }
+                    if(imageIndex==10){
+                        imageIndex=0;
+                    }
                   break;
               case 4:
                   if(imageIndex>0 && imageIndex<10){

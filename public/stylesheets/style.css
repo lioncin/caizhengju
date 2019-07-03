@@ -34,6 +34,7 @@ body {
 ul,li{
   margin: 0;
   padding: 0;
+  list-style: none;
 }
   .number{
     color:#595757;
@@ -199,10 +200,10 @@ ul,li{
 .view{
   position: absolute;
   width: 73%;
-  top: 30%;
+  top: 29%;
   height: 30%;
   overflow: hidden;
-  left: 13%;
+  left: 14%;
 }
 
 .imagelist li{
