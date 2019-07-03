@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body class="home step1 color5 line1">
-    <img src="/images/mawei4.jpg" alt="">
+  <body class="home">
+    <img src="/images/leader/sunzhongnan4.jpg" alt="">
   </body>
   <script>
       var startx, starty;
@@ -47,9 +47,8 @@
       //手指离开屏幕
       document.addEventListener("touchend", function(e) {
         var user = location.search.split('user=')[1];
-        var prev = '/mawei3?user='+user;
+        var prev = '/p9?user='+user;
         var next = '/end?user='+user;
-
           var endx, endy;
           endx = e.changedTouches[0].pageX;
           endy = e.changedTouches[0].pageY;
@@ -59,10 +58,10 @@
                   console.log("未滑动！");
                   break;
               case 1:
-                location.href = next;
+                  location.href = next;
                   break;
               case 2:
-                history.go(-1);
+              history.go(-1);
                   break;
               case 3:
                   console.log("向左！")

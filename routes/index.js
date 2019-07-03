@@ -52,20 +52,166 @@ router.get('/p9', function(req, res, next) {
   res.render('p9', { title: '园区税务年度账单'});
 });
 
+//mawei
 router.get('/mawei1', function(req, res, next) {
-  res.render('mawei1', { title: '园区税务年度账单'});
+  res.render('leader/mawei1', { title: '园区税务年度账单'});
 });
 
 router.get('/mawei2', function(req, res, next) {
-  res.render('mawei2', { title: '园区税务年度账单'});
+  res.render('leader/mawei2', { title: '园区税务年度账单'});
 });
 
 router.get('/mawei3', function(req, res, next) {
-  res.render('mawei3', { title: '园区税务年度账单'});
+  res.render('leader/mawei3', { title: '园区税务年度账单'});
 });
 
 router.get('/mawei4', function(req, res, next) {
-  res.render('mawei4', { title: '园区税务年度账单'});
+  res.render('leader/mawei4', { title: '园区税务年度账单'});
+});
+
+
+//linshuming-linxm
+router.get('/linsm1', function(req, res, next){
+  res.render('leader/linsm1', {'title':'园区税务年度账单'});
+});
+
+router.get('/linsm2', function(req, res, next){
+  res.render('leader/linsm2', {'title':'园区税务年度账单'});
+});
+
+router.get('/linsm3', function(req, res, next){
+  res.render('leader/linsm3', {'title':'园区税务年度账单'});
+});
+
+router.get('/linsm4', function(req, res, next){
+  res.render('leader/linsm4', {'title':'园区税务年度账单'});
+});
+
+//zhaoxin zhaox
+router.get('/zhaox1', function(req, res, next){
+  res.render('leader/zhaox1', {'title':'园区税务年度账单'});
+});
+
+router.get('/zhaox2', function(req, res, next){
+  res.render('leader/zhaox2', {'title':'园区税务年度账单'});
+});
+router.get('/zhaox3', function(req, res, next){
+  res.render('leader/zhaox3', {'title':'园区税务年度账单'});
+});
+router.get('/zhaox4', function(req, res, next){
+  res.render('leader/zhaox4', {'title':'园区税务年度账单'});
+});
+
+//cuie cuie
+router.get('/cuie1', function(req, res, next){
+  res.render('leader/cuie1', {'title':'园区税务年度账单'});
+});
+router.get('/cuie2', function(req, res, next){
+  res.render('leader/cuie2', {'title':'园区税务年度账单'});
+});
+router.get('/cuie3', function(req, res, next){
+  res.render('leader/cuie3', {'title':'园区税务年度账单'});
+});
+router.get('/cuie4', function(req, res, next){
+  res.render('leader/cuie4', {'title':'园区税务年度账单'});
+});
+
+//sunzhongnan sunzn
+router.get('/sunzn1', function(req, res, next){
+  res.render('leader/sunzn1', {'title':'园区税务年度账单'});
+});
+router.get('/sunzn2', function(req, res, next){
+  res.render('leader/sunzn2', {'title':'园区税务年度账单'});
+});
+router.get('/sunzn3', function(req, res, next){
+  res.render('leader/sunzn3', {'title':'园区税务年度账单'});
+});
+router.get('/sunzn4', function(req, res, next){
+  res.render('leader/sunzn4', {'title':'园区税务年度账单'});
+});
+
+//sunjianping sunjp
+router.get('/sunjp1', function(req, res, next){
+  res.render('leader/sunjp1', {'title':'园区税务年度账单'});
+});
+router.get('/sunjp2', function(req, res, next){
+  res.render('leader/sunjp2', {'title':'园区税务年度账单'});
+});
+router.get('/sunjp3', function(req, res, next){
+  res.render('leader/sunjp3', {'title':'园区税务年度账单'});
+});
+router.get('/sunjp4', function(req, res, next){
+  res.render('leader/sunjp4', {'title':'园区税务年度账单'});
+});
+
+//zhangweihong zhangwh
+router.get('/zhangwh1', function(req, res, next){
+  res.render('leader/zhangwh1', {'title':'园区税务年度账单'});
+});
+router.get('/zhangwh2', function(req, res, next){
+  res.render('leader/zhangwh2', {'title':'园区税务年度账单'});
+});
+router.get('/zhangwh3', function(req, res, next){
+  res.render('leader/zhangwh3', {'title':'园区税务年度账单'});
+});
+router.get('/zhangwh4', function(req, res, next){
+  res.render('leader/zhangwh4', {'title':'园区税务年度账单'});
+});
+
+//zhanfeng zhangf
+router.get('/zhangf1', function(req, res, next){
+  res.render('leader/zhangf1', {'title':'园区税务年度账单'});
+});
+router.get('/zhangf2', function(req, res, next){
+  res.render('leader/zhangf2', {'title':'园区税务年度账单'});
+});
+router.get('/zhangf3', function(req, res, next){
+  res.render('leader/zhangf3', {'title':'园区税务年度账单'});
+});
+router.get('/zhangf4', function(req, res, next){
+  res.render('leader/zhangf4', {'title':'园区税务年度账单'});
+});
+
+//wangqun wangq
+router.get('/wangq1', function(req, res, next){
+  res.render('leader/wanq1', {'title':'园区税务年度账单'});
+});
+router.get('/wangq2', function(req, res, next){
+  res.render('leader/wanq2', {'title':'园区税务年度账单'});
+});
+router.get('/wangq3', function(req, res, next){
+  res.render('leader/wanq3', {'title':'园区税务年度账单'});
+});
+router.get('/wangq4', function(req, res, next){
+  res.render('leader/wanq4', {'title':'园区税务年度账单'});
+});
+
+//bianweidong bianwd
+router.get('/bianwd1', function(req, res, next){
+  res.render('leader/bianwd1', {'title':'园区税务年度账单'});
+});
+router.get('/bianwd2', function(req, res, next){
+  res.render('leader/bianwd2', {'title':'园区税务年度账单'});
+});
+router.get('/bianwd3', function(req, res, next){
+  res.render('leader/bianwd3', {'title':'园区税务年度账单'});
+});
+router.get('/bianwd4', function(req, res, next){
+  res.render('leader/bianwd4', {'title':'园区税务年度账单'});
+});
+
+//tanjun tanj
+router.get('/tanj1', function(req, res, next){
+  res.render('leader/tanj1', {'title':'园区税务年度账单'});
+});
+router.get('/tanj2', function(req, res, next){
+  res.render('leader/tanj2', {'title':'园区税务年度账单'});
+});
+router.get('/tanj3', function(req, res, next){
+  res.render('leader/tanj3', {'title':'园区税务年度账单'});
+});
+router.get('/tanj4', function(req, res, next){
+  res.render('leader/tanj4', {'title':'园区税务年度账单'});
 });
 
 router.get('/step1', function(req, res, next) {
