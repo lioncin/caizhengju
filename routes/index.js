@@ -95,13 +95,23 @@ router.get('/step3', function(req, res, next) {
   if(abroadDays==''){
     abroadDays = 0;
   }
-  res.render('step3',
-    {
+
+  var outAddr = '';
+  if(user['abroadAddr']!=''){
+    outAddr = '，到过<span class="day number hidden">'+user['abroadAddr']+'</span>';
+  }
+  var abroadAddr = '';
+  if(abroadAddr!=''){
+    abroadAddr = '，到过<span class="day number hidden">'+user['workOutAddr']+'</span>';
+  }
+
+  res.render('step3',{
       title: '园区税务年度账单',
       outDay: workOutDays,
       abroadDay: abroadDays,
-    }
-  );
+      outAddr:outAddr,
+      abroadAddr:abroadAddr,
+    });
 });
 
 router.get('/step4', function(req, res, next) {
