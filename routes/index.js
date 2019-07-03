@@ -87,7 +87,10 @@ router.get('/step2', function(req, res, next) {
 router.get('/step3', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  const workOutDays = user['workOutDays'].split('.')[0];
+  var workOutDays = user['workOutDays'].split('.')[0];
+  if(workOutDays==''){
+    workOutDays = 0;
+  }
   var abroadDays = user['abroadDays'].split('.')[0];
   if(abroadDays==''){
     abroadDays = 0;
