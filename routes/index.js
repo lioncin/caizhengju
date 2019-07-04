@@ -217,27 +217,27 @@ router.get('/tanj4', function(req, res, next){
 router.get('/step1', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  const jbDays = user['workDay'].split('.')[0];
-  const jbHours = user['jbHours'].split('.')[0];
+  const jbDays = user['workDay'];
+  const jbHours = user['jbHours'];
   res.render('step/step1', { title: '园区税务年度账单','jbHours':user['jbHours'],'jbDays':jbDays });
 });
 
 router.get('/step2', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  const zzDaka = user['zzDaka'].split('.')[0];
-  const zwDaka = user['zwDaka'].split('.')[0];
+  const zzDaka = user['zzDaka'];
+  const zwDaka = user['zwDaka'];
   res.render('step/step2', { title: '园区税务年度账单','zzDaka':zzDaka, 'zwDaka':zwDaka });
 });
 
 router.get('/step3', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  var workOutDays = user['workOutDays'].split('.')[0];
+  var workOutDays = user['workOutDays'];
   if(workOutDays==''){
     workOutDays = 0;
   }
-  var abroadDays = user['abroadDays'].split('.')[0];
+  var abroadDays = user['abroadDays'];
   if(abroadDays==''){
     abroadDays = 0;
   }
@@ -263,20 +263,20 @@ router.get('/step3', function(req, res, next) {
 router.get('/step4', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  const workRecords = user['workRecords'].split('.')[0];
-  const tasks = user['tasks'].split('.')[0];
+  const workRecords = user['workRecords'];
+  const tasks = user['tasks'];
   res.render('step/step4', { title: '园区税务年度账单',wordRecords:workRecords,zini:tasks });
 });
 
 router.get('/step5', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
-  const vacation = user['vacation'].split('.')[0];
+  const vacation = user['vacation'];
   var abroadDays = '';
   if(user['abroadDays']==''){
     abroadDays = 0;
   }else{
-    abroadDays = user['abroadDays'].split('.')[0];
+    abroadDays = user['abroadDays'];
   }
 
   var abroadAddr = '和时间赛跑的路上';
