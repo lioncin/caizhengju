@@ -242,9 +242,9 @@ router.get('/step3', function(req, res, next) {
     abroadDays = 0;
   }
 
-  var outAddr = '';
-  if(user['abroadAddr']!=''){
-    outAddr = '到过<span class="day number hidden">'+user['abroadAddr']+'</span>';
+  var outAddr = '去过一些地方';
+  if(user['workOutAddr']!=''){
+    outAddr = '到过<span class="day number hidden">'+user['workOutAddr']+'</span>';
   }
   var abroadAddr = '';
   if(abroadAddr!=''){
@@ -272,7 +272,23 @@ router.get('/step5', function(req, res, next) {
   const uIndex = req.query.user;
   const user = USERDATA[uIndex];
   const vacation = user['vacation'].split('.')[0];
-  res.render('step/step5', { title: '园区税务年度账单',day:vacation});
+  var abroadDays = '';
+  if(user['abroadDays']==''){
+    abroadDays = 0;
+  }else{
+    abroadDays = user['abroadDays'].split('.')[0];
+  }
+
+  var abroadAddr = '和时间赛跑的路上';
+  if(user['abroadAddr']!=''){
+    abroadAddr = '去过<span class="day number hidden">'+user['abroadAddr']+'</span>';
+  }
+
+  res.render('step/step5', {
+    title: '园区税务年度账单',
+    abroad: abroadDays,
+    abroadAddr: abroadAddr,
+    vacation: vacation});
 });
 
 router.post('/login', function(req, res, next){
