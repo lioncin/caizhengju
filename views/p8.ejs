@@ -15,7 +15,6 @@
             <li class="image5"><img src="/images/8-4.jpg" alt=""></li>
             <li class="image5"><img src="/images/8-5.png" alt=""></li>
             <li class="image5"><img src="/images/8-6.jpg" alt=""></li>
-            <li class="image5"><img src="/images/8-7.jpg" alt=""></li>
         </ul>
     </div>
 
@@ -35,13 +34,13 @@
       var viewW = width * 0.7;
 
       var images = document.getElementsByClassName('image5');
-      for(var i=0; i<7; i++){
+      for(var i=0; i<6; i++){
         var image = images[i];
         image.style.width = viewW + 'px';
       }
 
       var imagelist = document.getElementById('imagelist');
-      imagelist.style.width = (viewW * 7 + 70) + 'px';
+      imagelist.style.width = (viewW * 6 + 60) + 'px';
 
       var startx, starty;
       //获得角度
@@ -100,7 +99,7 @@
                   break;
                   case 3:
                     imageIndex++;
-                    if(imageIndex==7){
+                    if(imageIndex==6){
                         imageIndex=0;
                     }
                   break;
