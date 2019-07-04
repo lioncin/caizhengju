@@ -224,3 +224,11 @@ ul,li{
 .imagelist2{
   top: 12%;
 }
+
+#next{
+  position: absolute;
+  bottom: 20%;
+  width: 20%;
+  left: 40%;
+  z-index: 4;
+}
